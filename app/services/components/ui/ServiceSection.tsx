@@ -1,7 +1,7 @@
 'use client';
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import FadeInUp from './FadeInUp';
+import FadeInUp from '../animations/FadeInUp';
 import ServiceCard from './ServiceCard';
 
 /** Универсальная секция услуг. Принимает заголовок, описание и группы карточек. */

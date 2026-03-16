@@ -1,4 +1,4 @@
-import ServiceSection from "./ServiceSection";
+import ServiceSection from "../ui/ServiceSection";
 import {
     Globe,
     Smartphone,

@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ServicesHero from "@/app/services/commponents/ServicesHero";
-import DesignSection from "@/app/services/commponents/DesignSection";
-import EngineeringSection from "@/app/services/commponents/EngineeringSection";
-import MarketingSection from "@/app/services/commponents/MarketingSection";
+import ServicesHero from "@/app/services/components/sections/ServicesHero";
+import DesignSection from "@/app/services/components/sections/DesignSection";
+import EngineeringSection from "@/app/services/components/sections/EngineeringSection";
+import MarketingSection from "@/app/services/components/sections/MarketingSection";
 
 export default function ServicesPage() {
     return (

@@ -2,13 +2,12 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
-// Общий конфиг для всей страницы
 export const smoothAnimation = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     transition: {
-        duration: 0.8, // Чуть медленнее для солидности
-        ease: [0.21, 0.45, 0.32, 0.9] as const, // Плавное замедление в конце
+        duration: 0.8,
+        ease: [0.21, 0.45, 0.32, 0.9] as const,
     }
 };
 
