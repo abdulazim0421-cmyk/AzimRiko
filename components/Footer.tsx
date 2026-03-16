@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     const navLinks = ['Home', 'Services', 'Work', 'Process', 'About', 'Careers', 'Contact'];
 
     return (
-        <footer className="bg-[#1A1A1A] text-white pt-12 pb-6 px-8 border-t border-[#262626]">
+        <footer className="relative z-50 bg-[#1A1A1A] text-white pt-12 pb-6 px-8 border-t border-[#262626]">
             <div className="max-w-7xl mx-auto">
 
                 {/* Top Section */}

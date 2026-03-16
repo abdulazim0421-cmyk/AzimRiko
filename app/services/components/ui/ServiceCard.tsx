@@ -31,7 +31,7 @@ export default function ServiceCard({ title, icon, description }: { title: strin
             animate={isOpen ? { scale: 1.02 } : { scale: 1 }}
             whileHover={!isOpen ? { scale: 1.02, y: -5, borderRadius: "12px" } : {}}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`group relative flex flex-col w-full p-6 md:p-8 border-r border-b border-zinc-800 bg-[#1A1A1A] hover:shadow-2xl hover:shadow-black/50 overflow-visible ${isOpen ? 'z-[100]' : 'z-10'} ${description ? 'cursor-pointer' : ''}`}
+            className={`group relative flex flex-col w-full p-6 md:p-8 border-r border-b border-zinc-800 bg-[#1A1A1A] hover:shadow-2xl hover:shadow-black/50 overflow-visible ${isOpen ? 'z-20' : 'z-0'} ${description ? 'cursor-pointer' : ''}`}
         >
             {/* Spotlight layer */}
             <motion.div
