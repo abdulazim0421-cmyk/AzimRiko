@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 import FadeInUp from './FadeInUp';
 import ServiceCard from './ServiceCard';
 
+/** Универсальная секция услуг. Принимает заголовок, описание и группы карточек. */
+
 interface ServiceGroup {
     category: string;
-    items: { title: string; icon: ReactNode }[];
+    items: { title: string; icon: ReactNode; description?: string }[];
 }
 
 interface ServiceSectionProps {
@@ -35,14 +37,21 @@ export default function ServiceSection({ title, description, groups }: ServiceSe
             <section className="container mx-auto px-4 md:px-8 max-w-7xl pb-20">
                 {groups.map((group, gIdx) => (
                     <div key={gIdx} className="mb-12 last:mb-0">
-                        <h3 className="text-zinc-400 text-lg mb-6 border-b border-zinc-800 pb-4">{group.category}</h3>
+                        <h3 className="text-zinc-400 text-lg pb-4 mb-6 border-b border-zinc-800">
+                            {group.category}
+                        </h3>
                         <motion.div
-                            initial="hidden" whileInView="visible" viewport={{ once: true }}
-                            transition={{ staggerChildren: 0.08 }}
-                            className="grid grid-cols-2 md:grid-cols-4 border-l border-t border-zinc-800"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-50px" }}
+                            variants={{
+                                hidden: {},
+                                visible: { transition: { staggerChildren: 0.1 } }
+                            }}
+                            className="grid grid-cols-2 gap-0 md:grid-cols-4 border-l border-t border-zinc-800 [&>*:nth-child(even)]:border-r-0 md:[&>*:nth-child(even)]:border-r md:[&>*:nth-child(4n)]:border-r-0"
                         >
                             {group.items.map((item, iIdx) => (
-                                <ServiceCard key={iIdx} title={item.title} icon={item.icon} />
+                                <ServiceCard key={iIdx} title={item.title} icon={item.icon} description={item.description} />
                             ))}
                         </motion.div>
                     </div>
