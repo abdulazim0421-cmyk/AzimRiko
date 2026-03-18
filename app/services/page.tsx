@@ -1,8 +1,8 @@
-import ServicesHero from "@/app/services/components/sections/ServicesHero";
-import DesignSection from "@/app/services/components/sections/DesignSection";
-import EngineeringSection from "@/app/services/components/sections/EngineeringSection";
-import MarketingSection from "@/app/services/components/sections/MarketingSection";
-import FinalCTA from "@/app/services/components/sections/FinalCTA";
+import ServicesHero from "@/components/sections/Services/ServicesHero";
+import DesignSection from "@/components/sections/Services/DesignSection";
+import EngineeringSection from "@/components/sections/Services/EngineeringSection";
+import MarketingSection from "@/components/sections/Services/MarketingSection";
+import FinalCTA from "@/components/sections/Services/FinalCTA";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 

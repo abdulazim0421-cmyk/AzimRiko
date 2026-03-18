@@ -1,4 +1,4 @@
-import FadeInUp from '../animations/FadeInUp';
+import FadeInUp from '../../animations/FadeInUp';
 
 export default function ServicesHero() {
     return (

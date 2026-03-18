@@ -1,4 +1,4 @@
-import ServiceSection from "../ui/ServiceSection";
+import ServiceSection from "../../ui/ServiceSection";
 import {
     Search, Layers, MousePointer2, Palette, Layout, PenTool, Smartphone, Target, Briefcase, ShieldCheck, FileText,
     SquaresSubtract, MousePointerClick, Sparkles, GalleryThumbnails, MousePointer, SunDim, BookMinus, CircleDotDashed,

@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import DesignSection from "../sections/DesignSection";
-import EngineeringSection from "../sections/EngineeringSection";
-import MarketingSection from "../sections/MarketingSection";
+import DesignSection from "../sections/Services/DesignSection";
+import EngineeringSection from "../sections/Services/EngineeringSection";
+import MarketingSection from "../sections/Services/MarketingSection";
 import ServiceCard from './ServiceCard';
 import {
     Layers, MousePointer2, Smartphone, Palette,
