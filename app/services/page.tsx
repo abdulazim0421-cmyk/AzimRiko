@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import ServicesHero from "@/app/services/components/sections/ServicesHero";
 import DesignSection from "@/app/services/components/sections/DesignSection";
 import EngineeringSection from "@/app/services/components/sections/EngineeringSection";
 import MarketingSection from "@/app/services/components/sections/MarketingSection";
 import FinalCTA from "@/app/services/components/sections/FinalCTA";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
 
 export default function ServicesPage() {
     return (
