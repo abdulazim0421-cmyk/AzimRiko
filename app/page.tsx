@@ -11,7 +11,7 @@ import TestimonialsGrid from "@/components/sections/home/Testimonials/Testimonia
 import PricingHeader from "@/components/sections/home/Pricing/PricingHeader";
 import FAQSection from "@/components/sections/home/FAQ/FAQSection";
 import CTASection from "@/components/sections/home/CTA/CTASection";
-import ContactForm from "@/components/sections/Contact/ContactForm";
+import ContactForm from "@/components/sections/home/Contact/ContactForm";
 import Footer from "@/components/layout/Footer";
 
 

@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import ProcessHero from "@/components/sections/process/ProcessHero";
 import ProcessSteps from "@/components/sections/process/ProcessSteps";
 import FinalCTA from "@/components/sections/Services/FinalCTA";
-import ContactForm from "@/components/sections/Contact/ContactForm";
+import ContactForm from "@/components/sections/home/Contact/ContactForm";
 import React from "react";
 
 export default function ProcessPage() {
