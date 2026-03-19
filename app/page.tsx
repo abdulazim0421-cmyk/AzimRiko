@@ -1,18 +1,16 @@
 import React from 'react';
-
-// Импорты из папки sections согласно твоей структуре на скриншоте
 import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/sections/Hero/Hero";
-import LogosSection from "@/components/sections/Logos/LogosSection";
+import Hero from "@/components/sections/home/Hero/Hero";
+import LogosSection from "@/components/sections/home/Logos/LogosSection";
 import ServicesHeader from "@/components/sections/Services/ServicesHeader";
 import ServicesGrid from "@/components/sections/Services/ServicesGrid";
-import WhyChooseHeader from "@/components/sections/WhyChoose/WhyChooseHeader";
-import WhyChooseGrid from "@/components/sections/WhyChoose/WhyChooseGrid";
-import TestimonialsHeader from "@/components/sections/Testimonials/TestimonialsHeader";
-import TestimonialsGrid from "@/components/sections/Testimonials/TestimonialsGrid";
-import PricingHeader from "@/components/sections/Pricing/PricingHeader";
-import FAQSection from "@/components/sections/FAQ/FAQSection";
-import CTASection from "@/components/sections/CTA/CTASection";
+import WhyChooseHeader from "@/components/sections/home/WhyChoose/WhyChooseHeader";
+import WhyChooseGrid from "@/components/sections/home/WhyChoose/WhyChooseGrid";
+import TestimonialsHeader from "@/components/sections/home/Testimonials/TestimonialsHeader";
+import TestimonialsGrid from "@/components/sections/home/Testimonials/TestimonialsGrid";
+import PricingHeader from "@/components/sections/home/Pricing/PricingHeader";
+import FAQSection from "@/components/sections/home/FAQ/FAQSection";
+import CTASection from "@/components/sections/home/CTA/CTASection";
 import ContactForm from "@/components/sections/Contact/ContactForm";
 import Footer from "@/components/layout/Footer";
 
