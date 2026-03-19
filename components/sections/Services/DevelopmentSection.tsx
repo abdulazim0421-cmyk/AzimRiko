@@ -1,4 +1,4 @@
-import ServiceSection from "../../ui/ServiceSection";
+import ServiceSection from "./ui/ServiceSection";
 import { Code, Smartphone, Terminal, Cpu } from 'lucide-react';
 
 export default function DevelopmentSection() {
