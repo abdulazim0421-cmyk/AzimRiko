@@ -37,7 +37,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="sticky top-0 z-50 flex items-center justify-between px-6 md:px-8 py-4 bg-[#1A1A1A]/95 backdrop-blur-sm border-b border-[#262626]">
+            <nav className="sticky top-0 z-50 bg-[#1A1A1A]/95 backdrop-blur-sm border-b border-[#262626]">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     <Image src="/Logo/logo.svg" alt="SquareUp Logo" width={32} height={32} className="md:w-10 md:h-10" priority />
@@ -77,6 +78,7 @@ const Navbar = () => {
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
+            </div>
             </nav>
 
             {/* Mobile Navigation Menu */}

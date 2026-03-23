@@ -92,7 +92,7 @@ const iconVariants = {
     rest: { scale: 1, filter: 'drop-shadow(0 0 0px transparent)' },
     hover: {
         scale: 1.15,
-        filter: 'drop-shadow(0 0 8px rgba(216,255,153,0.7))',
+        filter: 'drop-shadow(0 0 8px rgba(158,255,0,0.7))',
         transition: { duration: 0.25, ease: 'easeOut' as const },
     },
 };
@@ -133,7 +133,7 @@ function JobCard({ icon: Icon, title, description }: { icon: React.ElementType; 
                 className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 origin-center"
                 style={{ background: '#242424', border: '1px solid #2e2e2e' }}
             >
-                <Icon size={22} color="#D8FF99" strokeWidth={1.8} />
+                <Icon size={22} color="#9EFF00" strokeWidth={1.8} />
             </motion.div>
 
             {/* Title */}

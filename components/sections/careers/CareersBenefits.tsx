@@ -92,7 +92,7 @@ export default function CareersBenefits() {
                             <motion.h3
                                 variants={titleVariants}
                                 className="text-xl md:text-2xl font-semibold"
-                                style={{ color: '#ffffff' }}
+                                style={{ color: '#D8FF99' }}
                             >
                                 {b.title}
                             </motion.h3>
