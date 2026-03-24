@@ -19,7 +19,7 @@ const ContactForm = () => {
 
     return (
         <section className="bg-[#1A1A1A] relative overflow-hidden">
-            {/* Верхняя горизонтальная линия, стыкующаяся с боковыми */}
+            {/* Верхняя горизонтальная линия */}
             <div className="w-full h-[1px] bg-[#262626] relative z-20" />
 
             <div className="max-w-[1280px] mx-auto flex">
@@ -31,7 +31,7 @@ const ContactForm = () => {
                         className="max-w-[1100px] mx-auto space-y-6 md:space-y-8"
                         onSubmit={(e) => { e.preventDefault(); setIsModalOpen(true); }}
                     >
-                        {/* Имя и Email с разделительными линиями внутри */}
+                        {/* Имя и Email */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="bg-[#1E1E1E] border border-[#262626] rounded-xl p-6 relative after:absolute after:bottom-8 after:left-6 after:right-6 after:h-[1px] after:bg-[#262626]">
                                 <label className="text-white font-medium block mb-4 text-sm md:text-base">Full Name</label>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                             </div>
                         </div>
 
-                        {/* Бюджет: Без линии на цифрах и с увеличенным шрифтом */}
+                        {/* Бюджет */}
                         <div className="bg-[#1E1E1E] border border-[#262626] rounded-xl p-6 md:p-10">
                             <label className="text-white font-medium block mb-1">Your Budget</label>
                             <p className="text-gray-500 text-xs mb-12">Slide to indicate your budget range</p>
@@ -99,6 +99,35 @@ const ContactForm = () => {
 
             {/* Нижняя горизонтальная линия */}
             <div className="w-full h-[1px] bg-[#262626]" />
+
+            {/* Простое уведомление об успехе (модалка) */}
+            <AnimatePresence>
+                {isModalOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsModalOpen(false)}
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="bg-[#1E1E1E] border border-[#262626] p-8 rounded-2xl max-w-sm w-full text-center"
+                        >
+                            <div className="w-16 h-16 bg-[#C5FF32] rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Check size={32} className="text-black" />
+                            </div>
+                            <h3 className="text-white text-xl font-bold mb-2">Message Sent!</h3>
+                            <p className="text-gray-400 mb-6">We will get back to you soon.</p>
+                            <button className="bg-[#262626] text-white px-8 py-2 rounded-lg hover:bg-[#333] transition-colors">
+                                Close
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
