@@ -2,9 +2,10 @@ import ServicesHero from "@/components/sections/Services/ServicesHero";
 import DesignSection from "@/components/sections/Services/DesignSection";
 import EngineeringSection from "@/components/sections/Services/EngineeringSection";
 import MarketingSection from "@/components/sections/Services/MarketingSection";
-import FinalCTA from "@/components/sections/Services/FinalCTA";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import CTASection from "@/components/sections/home/CTA/CTASection";
+import React from "react";
 
 export default function ServicesPage() {
     return (
@@ -15,7 +16,7 @@ export default function ServicesPage() {
                     <DesignSection/>
                     <EngineeringSection/>
                     <MarketingSection/>
-                    <FinalCTA/>
+                    <CTASection />
                 </main>
             <Footer/>
         </div>
