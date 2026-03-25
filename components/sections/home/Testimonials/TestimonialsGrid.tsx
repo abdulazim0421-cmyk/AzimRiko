@@ -64,9 +64,23 @@ const testimonials: Testimonial[] = [
     }
 ];
 
+const neonVariants = {
+    rest: { clipPath: 'inset(0 100% 0 0)', opacity: 0 },
+    hover: { clipPath: 'inset(0 0% 0 0)', opacity: 1, transition: { duration: 0.4, ease: 'easeOut' as const } },
+};
+
+const bgVariants = {
+    rest: { opacity: 0 },
+    hover: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1 } }),
+};
+
 const TestimonialsGrid: React.FC = () => {
 
-    // Функция для открытия ссылки
     const handleOpenWebsite = (url: string) => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
@@ -78,14 +92,29 @@ const TestimonialsGrid: React.FC = () => {
                     {testimonials.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            custom={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            whileHover="hover"
+                            animate="rest"
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-[#1A1A1A] p-8 md:p-16 flex flex-col justify-between min-h-[450px] md:min-h-[500px]"
+                            className="relative overflow-hidden bg-[#1A1A1A] p-8 md:p-16 flex flex-col justify-between min-h-[450px] md:min-h-[500px] cursor-default"
                         >
-                            <div className="mb-8">
-                                <h3 className="text-[#C5FF32] text-xl md:text-2xl font-semibold mb-6 leading-tight">
+                            {/* Neon top sweep */}
+                            <motion.div
+                                variants={neonVariants}
+                                className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#D8FF99] to-transparent pointer-events-none"
+                            />
+
+                            {/* Subtle bg glow */}
+                            <motion.div
+                                variants={bgVariants}
+                                className="absolute inset-0 bg-[#D8FF99]/[0.03] pointer-events-none"
+                            />
+
+                            <div className="relative mb-8">
+                                <h3 className="text-[#D8FF99] text-xl md:text-2xl font-semibold mb-6 leading-tight">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm md:text-lg leading-relaxed">
@@ -93,9 +122,7 @@ const TestimonialsGrid: React.FC = () => {
                                 </p>
                             </div>
 
-                            {/* Блок автора и кнопки */}
-                            {/* ADAPTIVE: flex-col на мобилках, flex-row на десктопе */}
-                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#1C1C1C] p-4 md:p-5 rounded-xl border border-[#262626] gap-4">
+                            <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#1C1C1C] p-4 md:p-5 rounded-xl border border-[#262626] gap-4">
                                 <div className="flex items-center gap-3">
                                     <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden flex-shrink-0 bg-[#262626]">
                                         <Image

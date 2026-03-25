@@ -31,14 +31,14 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center bg-[#262626] rounded-lg p-1 border border-[#333333]">
+                <div className="hidden md:flex items-center gap-1 bg-[#262626] rounded-lg p-1 border border-[#333333]">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`px-5 py-2 rounded-md text-sm font-medium transition-all ${
+                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                                     isActive ? 'bg-[#333333] text-white shadow-inner' : 'text-gray-400 hover:text-white hover:bg-[#2d2d2d]'
                                 }`}
                             >

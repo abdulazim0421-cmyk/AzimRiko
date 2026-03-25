@@ -22,7 +22,7 @@ const faqs: FAQItem[] = [
 
 const FAQSection: React.FC = () => {
     // Состояние открытого вопроса
-    const [openId, setOpenId] = useState<string | null>("01");
+    const [openId, setOpenId] = useState<string | null>(null);
 
     return (
         <section className="bg-[#1A1A1A] border-t border-[#262626]">

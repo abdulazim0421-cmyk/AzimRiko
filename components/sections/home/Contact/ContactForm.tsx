@@ -7,7 +7,7 @@ import { Check } from 'lucide-react';
 
 const ContactForm = () => {
     const [budget, setBudget] = useState([1000, 5000]);
-    const [selectedServices, setSelectedServices] = useState<string[]>(['Web Design']);
+    const [selectedServices, setSelectedServices] = useState<string[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const services = [

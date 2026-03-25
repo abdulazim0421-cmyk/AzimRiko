@@ -5,6 +5,7 @@ import ProcessSteps from "@/components/sections/process/ProcessSteps";
 import ContactForm from "@/components/sections/home/Contact/ContactForm";
 import React from "react";
 import AboutFinalCTA from "@/components/sections/about/AboutFinalCTA";
+import CTASection from "@/components/sections/home/CTA/CTASection";
 
 export default function ProcessPage() {
     return (
@@ -13,7 +14,7 @@ export default function ProcessPage() {
             <main className="relative z-10 bg-[#1A1A1A]">
                 <ProcessHero />
                 <ProcessSteps />
-                <AboutFinalCTA />
+                <CTASection />
                 <ContactForm/>
             </main>
             <Footer />
