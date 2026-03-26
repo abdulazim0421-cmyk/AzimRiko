@@ -46,6 +46,7 @@ const CTASection: React.FC = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
+                    {/* Logo icon */}
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-[#C5FF32] rounded-3xl flex items-center justify-center shadow-lg mb-10 p-5 md:p-6 hover:scale-105 transition-transform duration-300">
                         <Image src="/Logo/logo.svg" alt="SquareUp Logo" width={80} height={80} />
                     </div>
@@ -56,6 +57,7 @@ const CTASection: React.FC = () => {
 
                     <p className="max-w-3xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed mb-12 px-6">
                         We would love to hear from you and discuss how we can help bring your digital ideas to life.
+                        Here are the different ways you can get in touch with us.
                     </p>
 
                     {/* Кнопка теперь открывает модалку */}
