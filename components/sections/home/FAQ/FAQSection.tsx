@@ -21,8 +21,8 @@ const faqs: FAQItem[] = [
 ];
 
 const FAQSection: React.FC = () => {
-    // Состояние открытого вопроса
-    const [openId, setOpenId] = useState<string | null>("01");
+    // ИЗМЕНЕНО: Начальное состояние null, чтобы все вопросы были закрыты
+    const [openId, setOpenId] = useState<string | null>(null);
 
     return (
         <section className="bg-[#1A1A1A] border-t border-[#262626]">
@@ -67,7 +67,7 @@ const FAQSection: React.FC = () => {
                                                     isOpen ? 'bg-[#C5FF32] rotate-45' : 'bg-white'
                                                 }`}
                                             />
-                                            {/* Вертикальная линия (вращается, чтобы стать второй частью крестика) */}
+                                            {/* Вертикальная линия */}
                                             <span
                                                 className={`absolute h-[2px] w-5 transition-all duration-300 ${
                                                     isOpen ? 'bg-[#C5FF32] -rotate-45' : 'bg-white rotate-90'
