@@ -21,7 +21,7 @@ const faqs: FAQItem[] = [
 ];
 
 const FAQSection: React.FC = () => {
-    // Состояние открытого вопроса
+    // ИЗМЕНЕНО: Начальное состояние null, чтобы все вопросы были закрыты
     const [openId, setOpenId] = useState<string | null>(null);
 
     return (
