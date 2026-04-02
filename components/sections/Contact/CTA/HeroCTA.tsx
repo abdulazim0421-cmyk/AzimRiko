@@ -28,7 +28,7 @@ const HeroCTA = () => {
                             <h2 className="text-white text-2xl md:text-3xl font-medium leading-tight">
                                 Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....
                             </h2>
-                            {/* Текст стал темнее (text-gray-500) и меньше (text-sm/base) */}
+                            {/* Текст темнее */}
                             <p className="text-gray-500 text-sm md:text-base font-normal leading-relaxed">
                                 Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.
                             </p>
